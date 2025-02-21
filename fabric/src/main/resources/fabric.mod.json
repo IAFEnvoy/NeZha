@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ne_zha",
+  "version": "${version}",
+  "name": "Ne Zha",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "IAFEnvoy"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "All Right Reserved",
+  "icon": "assets/ne_zha/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.iafenvoy.nezha.fabric.NeZhaFabric"
+    ],
+    "client": [
+      "com.iafenvoy.nezha.fabric.client.NeZhaFabricClient"
+    ]
+  },
+  "mixins": [
+    "ne_zha.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "1.20.1",
+    "architectury": "*",
+    "fabric-api": "*"
+  }
+}

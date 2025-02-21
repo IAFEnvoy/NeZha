@@ -1,0 +1,150 @@
+{
+  "parent": "builtin/entity",
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "ne_zha:item/sky_shield_blocking"
+    }
+  ],
+  "gui-light": "front",
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "translation": [
+        0.5,
+        -5.0,
+        2
+      ],
+      "scale": [
+        1.00,
+        1.00,
+        1.00
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "translation": [
+        0.50,
+        -5,
+        6
+      ],
+      "scale": [
+        1.00,
+        1.00,
+        1.00
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        180,
+        5
+      ],
+      "translation": [
+        -2,
+        -19,
+        0.00
+      ],
+      "scale": [
+        1.65,
+        1.65,
+        1.65
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        180,
+        5
+      ],
+      "translation": [
+        4.5,
+        -19.5,
+        2
+      ],
+      "scale": [
+        1.65,
+        1.65,
+        1.65
+      ]
+    },
+    "gui": {
+      "rotation": [
+        15,
+        -25,
+        -5
+      ],
+      "translation": [
+        2,
+        -2,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0.00,
+        0.00,
+        0.00
+      ],
+      "scale": [
+        1.00,
+        1.00,
+        1.00
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        1,
+        -1.5,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0.00,
+        3.00,
+        0.00
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    }
+  }
+}
