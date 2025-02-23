@@ -32,13 +32,12 @@ public class SkyBowItem extends BowItem {
                     arrow.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0F, f * 3.0F, 1.0F);
                     if (f == 1.0F) arrow.setCritical(true);
                     int j = EnchantmentHelper.getLevel(Enchantments.POWER, stack);
-                    if (j > 0)
-                        arrow.setDamage(arrow.getDamage() + (double) j * 0.5 + 1.5);
+                    if (j > 0) arrow.setDamage(arrow.getDamage() + (double) j * 0.5 + 1.5);
                     int k = EnchantmentHelper.getLevel(Enchantments.PUNCH, stack);
                     if (k > 0) arrow.setPunch(k);
                     if (EnchantmentHelper.getLevel(Enchantments.FLAME, stack) > 0)
                         arrow.setOnFireFor(100);
-                    stack.damage(1, playerEntity, (p) -> p.sendToolBreakStatus(playerEntity.getActiveHand()));
+                    stack.damage(1, playerEntity, p -> p.sendToolBreakStatus(playerEntity.getActiveHand()));
                     world.spawnEntity(arrow);
                 }
                 world.playSound(null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
