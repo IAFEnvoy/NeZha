@@ -1,8 +1,10 @@
 package com.iafenvoy.nezha.registry;
 
+import com.iafenvoy.neptune.render.CommonPlayerLikeEntityRenderer;
 import com.iafenvoy.neptune.render.DynamicItemRenderer;
-import com.iafenvoy.nezha.render.SkyArrowEntityRenderer;
-import com.iafenvoy.nezha.render.SkyShieldItemRenderer;
+import com.iafenvoy.nezha.render.entity.NeZhaEntityRenderer;
+import com.iafenvoy.nezha.render.entity.SkyArrowEntityRenderer;
+import com.iafenvoy.nezha.render.item.SkyShieldItemRenderer;
 import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
 import dev.architectury.registry.item.ItemPropertiesRegistry;
 import net.fabricmc.api.EnvType;
@@ -13,6 +15,9 @@ import net.minecraft.util.Identifier;
 public final class NZRenderers {
     public static void registerEntityRenderers() {
         EntityRendererRegistry.register(NZEntities.SKY_ARROW, SkyArrowEntityRenderer::new);
+
+        EntityRendererRegistry.register(NZEntities.NE_ZHA, NeZhaEntityRenderer::new);
+        EntityRendererRegistry.register(NZEntities.AO_BING, CommonPlayerLikeEntityRenderer::new);
     }
 
     public static void registerModelPredicates() {

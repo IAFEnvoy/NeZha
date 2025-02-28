@@ -1,4 +1,4 @@
-package com.iafenvoy.nezha.render;
+package com.iafenvoy.nezha.render.entity;
 
 import com.iafenvoy.nezha.NeZha;
 import com.iafenvoy.nezha.entity.SkyArrowEntity;
