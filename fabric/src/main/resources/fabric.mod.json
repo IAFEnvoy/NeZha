@@ -3,16 +3,16 @@
   "id": "ne_zha",
   "version": "${version}",
   "name": "Ne Zha",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "A fan-made mod of Ne Zha movie.",
   "authors": [
-    "IAFEnvoy"
+    "IAFEnvoy",
+    "ColdWindHF"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/IAFEnvoy/NeZha"
   },
   "license": "All Right Reserved",
-  "icon": "assets/ne_zha/icon.png",
+  "icon": "logo.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -27,7 +27,7 @@
   ],
   "depends": {
     "minecraft": "1.20.1",
-    "architectury": "*",
+    "neptune": ">=2.3",
     "fabric-api": "*"
   }
 }

@@ -1,17 +1,17 @@
 modLoader = "javafml"
 loaderVersion = "[47,)"
-#issueTrackerURL = ""
+issueTrackerURL = "https://github.com/IAFEnvoy/NeZha/issues"
 license = "All Right Reserved"
 
 [[mods]]
 modId = "ne_zha"
 version = "${version}"
 displayName = "Ne Zha"
-authors = "IAFEnvoy"
+authors = "IAFEnvoy, ColdWindHF"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+A fan-made mod of Ne Zha movie.
 '''
-#logoFile = ""
+logoFile = "logo.png"
 
 [[dependencies.ne_zha]]
 modId = "forge"
@@ -28,8 +28,8 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.ne_zha]]
-modId = "architectury"
+modId = "neptune"
 mandatory = true
-versionRange = "[9.2.14,)"
+versionRange = "[2.3,)"
 ordering = "AFTER"
 side = "BOTH"

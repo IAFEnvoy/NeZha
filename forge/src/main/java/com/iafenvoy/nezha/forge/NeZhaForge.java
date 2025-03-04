@@ -13,6 +13,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod(NeZha.MOD_ID)
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class NeZhaForge {
+    @SuppressWarnings("removal")
     public NeZhaForge() {
         EventBuses.registerModEventBus(NeZha.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
 

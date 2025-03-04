@@ -1,0 +1,28 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "ne_zha:lotus_root_slice"
+    },
+    {
+      "item": "ne_zha:lotus_root_slice"
+    },
+    {
+      "item": "ne_zha:lotus_root_slice"
+    },
+    [
+      {
+        "item": "minecraft:sugar"
+      },
+      {
+        "item": "minecraft:honey_bottle"
+      }
+    ]
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "ne_zha:lotus_root_starch"
+  }
+}

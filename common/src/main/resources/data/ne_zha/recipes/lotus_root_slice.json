@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "ne_zha:lotus_root"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "ne_zha:lotus_root_slice"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knives"
+  }
+}
