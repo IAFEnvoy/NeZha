@@ -9,6 +9,7 @@ public final class NeZha {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public static void init() {
+        NZBlocks.REGISTRY.register();
         NZEntities.REGISTRY.register();
         NZItemGroups.REGISTRY.register();
         NZItems.REGISTRY.register();
@@ -17,6 +18,7 @@ public final class NeZha {
     }
 
     public static void process() {
+        NZBehaviours.init();
         NZPowerCategories.init();
         NZPowers.init();
     }
