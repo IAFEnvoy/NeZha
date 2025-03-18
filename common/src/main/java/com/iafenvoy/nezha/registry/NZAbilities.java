@@ -1,13 +1,13 @@
 package com.iafenvoy.nezha.registry;
 
-import com.iafenvoy.neptune.power.type.PersistPower;
+import com.iafenvoy.neptune.ability.type.PersistAbility;
 import com.iafenvoy.nezha.NeZha;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 
-public final class NZPowers {
-    public static final PersistPower SKY_SHIELD = new PersistPower(Identifier.of(NeZha.MOD_ID, "sky_shield"), NZPowerCategories.MAGIC_ARTS)
+public final class NZAbilities {
+    public static final PersistAbility SKY_SHIELD = new PersistAbility(Identifier.of(NeZha.MOD_ID, "sky_shield"), NZAbilityCategories.MAGIC_ARTS)
             .setExhaustion(holder -> 0.02)
             .onApply(holder -> {
                 ItemStack stack = new ItemStack(NZItems.SKY_SHIELD.get());

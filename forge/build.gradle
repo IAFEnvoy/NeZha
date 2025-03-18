@@ -39,7 +39,7 @@ dependencies {
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')
 
-    modImplementation "maven.modrinth:neptune:pHBy7f5M"
+    modImplementation "maven.modrinth:neptune:If7EQSnw"
     modImplementation "maven.modrinth:jupiter:quscWB5K"
 }
 

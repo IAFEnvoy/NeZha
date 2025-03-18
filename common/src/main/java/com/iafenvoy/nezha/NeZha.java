@@ -19,7 +19,7 @@ public final class NeZha {
 
     public static void process() {
         NZBehaviours.init();
-        NZPowerCategories.init();
-        NZPowers.init();
+        NZAbilityCategories.init();
+        NZAbilities.init();
     }
 }
