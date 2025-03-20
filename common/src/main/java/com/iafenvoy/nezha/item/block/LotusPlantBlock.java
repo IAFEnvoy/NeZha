@@ -53,6 +53,10 @@ public class LotusPlantBlock extends HorizontalFacingBlock implements Horizontal
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        return isOnValid(world, pos) && !world.getBlockState(pos.up()).isFullCube(world, pos);
+    }
+
+    protected static boolean isOnValid(WorldView world, BlockPos pos) {
         return world.getBlockState(pos.down()).isIn(NZTags.LOTUS_PLANT_CAN_PLACE_AT);
     }
 }

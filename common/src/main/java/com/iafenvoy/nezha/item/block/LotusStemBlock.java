@@ -45,11 +45,12 @@ public class LotusStemBlock extends LotusPlantBlock implements Fertilizable, Flu
         BlockState upState = world.getBlockState(up);
         if (upState.isOf(Blocks.WATER))
             world.setBlockState(up, this.withRandomRotation(this.getDefaultState(), FACING));
-        else if (upState.isAir()) world.setBlockState(up, this.withRandomRotation((switch (random.nextInt(3)) {
-            case 1 -> NZBlocks.LOTUS_LEAF_WITH_FLOWERS;
-            case 2 -> NZBlocks.LOTUS_LEAF_WITH_SEEDPODS;
-            default -> NZBlocks.LOTUS_LEAF;
-        }).get().getDefaultState(), FACING));
+        else if (upState.isAir() && !world.getBlockState(up.up()).isFullCube(world, pos))
+            world.setBlockState(up, this.withRandomRotation((switch (random.nextInt(3)) {
+                case 1 -> NZBlocks.LOTUS_LEAF_WITH_FLOWERS;
+                case 2 -> NZBlocks.LOTUS_LEAF_WITH_SEEDPODS;
+                default -> NZBlocks.LOTUS_LEAF;
+            }).get().getDefaultState(), FACING));
     }
 
     @Override
@@ -71,5 +72,10 @@ public class LotusStemBlock extends LotusPlantBlock implements Fertilizable, Flu
     @Override
     public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
         return false;
+    }
+
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        return isOnValid(world, pos);
     }
 }

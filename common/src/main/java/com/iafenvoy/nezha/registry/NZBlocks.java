@@ -3,6 +3,7 @@ package com.iafenvoy.nezha.registry;
 import com.iafenvoy.nezha.NeZha;
 import com.iafenvoy.nezha.item.block.LotusPlantBlock;
 import com.iafenvoy.nezha.item.block.LotusRootBlock;
+import com.iafenvoy.nezha.item.block.LotusSeedBlock;
 import com.iafenvoy.nezha.item.block.LotusStemBlock;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -19,6 +20,8 @@ import java.util.function.Supplier;
 public final class NZBlocks {
     public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(NeZha.MOD_ID, RegistryKeys.BLOCK);
 
+    public static final RegistrySupplier<Block> LOTUS_SEED_DIRT = register("lotus_seed_dirt", () -> new LotusSeedBlock(AbstractBlock.Settings.copy(Blocks.DIRT)), item -> new BlockItem(item, new Item.Settings().arch$tab(NZItemGroups.MAIN)));
+    public static final RegistrySupplier<Block> LOTUS_SEED_MUD = register("lotus_seed_mud", () -> new LotusSeedBlock(AbstractBlock.Settings.copy(Blocks.MUD)), item -> new BlockItem(item, new Item.Settings().arch$tab(NZItemGroups.MAIN)));
     public static final RegistrySupplier<Block> LOTUS_ROOT_DIRT = register("lotus_root_dirt", () -> new LotusRootBlock(AbstractBlock.Settings.copy(Blocks.DIRT)), item -> new BlockItem(item, new Item.Settings().arch$tab(NZItemGroups.MAIN)));
     public static final RegistrySupplier<Block> LOTUS_ROOT_MUD = register("lotus_root_mud", () -> new LotusRootBlock(AbstractBlock.Settings.copy(Blocks.MUD)), item -> new BlockItem(item, new Item.Settings().arch$tab(NZItemGroups.MAIN)));
     public static final RegistrySupplier<Block> LOTUS_LEAF = registerNoItem("lotus_leaf", () -> new LotusPlantBlock(AbstractBlock.Settings.copy(Blocks.BIG_DRIPLEAF)));
