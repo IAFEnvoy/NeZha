@@ -6,9 +6,11 @@ import com.iafenvoy.nezha.render.entity.NeZhaEntityRenderer;
 import com.iafenvoy.nezha.render.entity.SkyArrowEntityRenderer;
 import com.iafenvoy.nezha.render.item.SkyShieldItemRenderer;
 import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
+import dev.architectury.registry.client.rendering.RenderTypeRegistry;
 import dev.architectury.registry.item.ItemPropertiesRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
@@ -18,6 +20,10 @@ public final class NZRenderers {
 
         EntityRendererRegistry.register(NZEntities.NE_ZHA, NeZhaEntityRenderer::new);
         EntityRendererRegistry.register(NZEntities.AO_BING, CommonPlayerLikeEntityRenderer::new);
+    }
+
+    public static void registerRenderLayers() {
+        RenderTypeRegistry.register(RenderLayer.getCutout(), NZBlocks.LOTUS_LEAF.get(), NZBlocks.LOTUS_LEAF_WITH_FLOWERS.get(), NZBlocks.LOTUS_LEAF_WITH_SEEDPODS.get(), NZBlocks.LOTUS_STEM.get());
     }
 
     public static void registerModelPredicates() {

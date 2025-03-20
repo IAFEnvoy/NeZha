@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ne_zha:block/lotus_stem"
+    },
+    "facing=east": {
+      "model": "ne_zha:block/lotus_stem",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ne_zha:block/lotus_stem",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ne_zha:block/lotus_stem",
+      "y": 270
+    }
+  }
+}

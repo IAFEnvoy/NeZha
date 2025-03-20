@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ne_zha:block/lotus_leaf_with_seedpods"
+    },
+    "facing=east": {
+      "model": "ne_zha:block/lotus_leaf_with_seedpods",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ne_zha:block/lotus_leaf_with_seedpods",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ne_zha:block/lotus_leaf_with_seedpods",
+      "y": 270
+    }
+  }
+}

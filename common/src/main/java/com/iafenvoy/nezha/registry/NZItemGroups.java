@@ -14,9 +14,9 @@ import java.util.function.Supplier;
 public final class NZItemGroups {
     public static final DeferredRegister<ItemGroup> REGISTRY = DeferredRegister.create(NeZha.MOD_ID, RegistryKeys.ITEM_GROUP);
 
-    public static final RegistrySupplier<ItemGroup> MAIN = registry("main", () -> CreativeTabRegistry.create(Text.translatable("itemGroup.%s.main".formatted(NeZha.MOD_ID)), Items.AIR::getDefaultStack));
+    public static final RegistrySupplier<ItemGroup> MAIN = register("main", () -> CreativeTabRegistry.create(Text.translatable("itemGroup.%s.main".formatted(NeZha.MOD_ID)), Items.AIR::getDefaultStack));
 
-    public static <T extends ItemGroup> RegistrySupplier<T> registry(String id, Supplier<T> obj) {
+    public static <T extends ItemGroup> RegistrySupplier<T> register(String id, Supplier<T> obj) {
         return REGISTRY.register(id, obj);
     }
 }

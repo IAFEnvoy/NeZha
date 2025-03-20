@@ -8,6 +8,7 @@ public class NeZhaClient {
     }
 
     public static void process() {
+        NZRenderers.registerRenderLayers();
         NZRenderers.registerModelPredicates();
         NZRenderers.registerBuiltinItemRenderers();
     }
