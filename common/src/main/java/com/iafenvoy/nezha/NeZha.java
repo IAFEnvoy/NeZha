@@ -1,5 +1,6 @@
 package com.iafenvoy.nezha;
 
+import com.iafenvoy.neptune.accessory.AccessoryManager;
 import com.iafenvoy.nezha.registry.*;
 import com.mojang.logging.LogUtils;
 import org.slf4j.Logger;
@@ -21,5 +22,7 @@ public final class NeZha {
         NZBehaviours.init();
         NZAbilityCategories.init();
         NZAbilities.init();
+
+        AccessoryManager.register(NZItems.HOT_WHEEL.get());
     }
 }

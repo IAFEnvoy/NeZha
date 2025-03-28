@@ -1,8 +1,7 @@
 package com.iafenvoy.nezha.fabric;
 
-import net.fabricmc.api.ModInitializer;
-
 import com.iafenvoy.nezha.NeZha;
+import net.fabricmc.api.ModInitializer;
 
 public final class NeZhaFabric implements ModInitializer {
     @Override

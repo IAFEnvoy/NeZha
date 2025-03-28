@@ -3,6 +3,8 @@ package com.iafenvoy.nezha.registry;
 import com.iafenvoy.neptune.object.item.RestrictedItem;
 import com.iafenvoy.nezha.NeZha;
 import com.iafenvoy.nezha.entity.NeZhaEntity;
+import com.iafenvoy.nezha.item.HeavenEarthRingItem;
+import com.iafenvoy.nezha.item.HotWheelItem;
 import com.iafenvoy.nezha.item.LotusSeedItem;
 import com.iafenvoy.nezha.item.SkyBowItem;
 import com.iafenvoy.nezha.item.impl.SkyShieldItem;
@@ -19,7 +21,9 @@ public final class NZItems {
     public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(NeZha.MOD_ID, RegistryKeys.ITEM);
 
     public static final RegistrySupplier<Item> SKY_SHIELD = register("sky_shield", SkyShieldItem::create);
-    public static final RegistrySupplier<Item> SKY_BOW = register("sky_bow", SkyBowItem::new);
+    public static final RegistrySupplier<SkyBowItem> SKY_BOW = register("sky_bow", SkyBowItem::new);
+    public static final RegistrySupplier<HeavenEarthRingItem> HEAVEN_EARTH_RING = register("heaven_earth_ring", HeavenEarthRingItem::new);
+    public static final RegistrySupplier<HotWheelItem> HOT_WHEEL = register("hot_wheel", HotWheelItem::new);
     //Spawn Eggs
     public static final RegistrySupplier<Item> NE_ZHA_SPAWN_EGG = register("ne_zha_spawn_egg", () -> new ArchitecturySpawnEggItem(NZEntities.NE_ZHA, 0xFFF4A460, 0xFFFF0000, new Item.Settings().arch$tab(NZItemGroups.MAIN)));
     public static final RegistrySupplier<Item> AO_BING_SPAWN_EGG = register("ao_bing_spawn_egg", () -> new ArchitecturySpawnEggItem(NZEntities.AO_BING, 0xFFFFFFFF, 0xFF87CEFA, new Item.Settings().arch$tab(NZItemGroups.MAIN)));

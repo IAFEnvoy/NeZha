@@ -36,9 +36,10 @@ dependencies {
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
 
-    modImplementation "maven.modrinth:neptune:bCuLHsc5"
+    modImplementation "maven.modrinth:neptune:VWW7YOV3"
     modImplementation "maven.modrinth:jupiter:nhqjUZZy"
 
+    modImplementation "dev.emi:trinkets:${trinkets_version}"
     modImplementation "com.github.CrimsonDawn45:Fabric-Shield-Lib:v${project.fabric_shield_lib_version}"
 }
 

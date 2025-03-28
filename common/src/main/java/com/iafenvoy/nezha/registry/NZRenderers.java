@@ -2,8 +2,10 @@ package com.iafenvoy.nezha.registry;
 
 import com.iafenvoy.neptune.render.CommonPlayerLikeEntityRenderer;
 import com.iafenvoy.neptune.render.DynamicItemRenderer;
+import com.iafenvoy.neptune.render.armor.IArmorRendererBase;
 import com.iafenvoy.nezha.render.entity.NeZhaEntityRenderer;
 import com.iafenvoy.nezha.render.entity.SkyArrowEntityRenderer;
+import com.iafenvoy.nezha.render.item.HotWheelArmorRenderer;
 import com.iafenvoy.nezha.render.item.SkyShieldItemRenderer;
 import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
 import dev.architectury.registry.client.rendering.RenderTypeRegistry;
@@ -33,5 +35,9 @@ public final class NZRenderers {
 
     public static void registerBuiltinItemRenderers() {
         DynamicItemRenderer.RENDERERS.put(NZItems.SKY_SHIELD.get(), new SkyShieldItemRenderer());
+    }
+
+    public static void registerArmorRenderers() {
+        IArmorRendererBase.register(new HotWheelArmorRenderer(), NZItems.HOT_WHEEL.get());
     }
 }
