@@ -3,7 +3,9 @@ package com.iafenvoy.nezha.trail;
 import com.iafenvoy.neptune.util.Color4i;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.Vec3d;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.UUID;
 import java.util.function.Predicate;
 
 public class EntityTrailProvider<T extends Entity> implements TrailProvider {
@@ -24,6 +26,11 @@ public class EntityTrailProvider<T extends Entity> implements TrailProvider {
     }
 
     @Override
+    public @Nullable UUID getOwnerUuid() {
+        return this.entity.getUuid();
+    }
+
+    @Override
     public TrailHolder createTail() {
         return new TrailHolder(this, this.width, this.length);
     }
@@ -36,8 +43,8 @@ public class EntityTrailProvider<T extends Entity> implements TrailProvider {
     }
 
     @Override
-    public TrailHolder.TrailPoint adjustPoint(TrailHolder.TrailPoint point, boolean vertical, float partialTicks) {
-        return point.offset(this.offset);
+    public Vec3d getCurrentPos() {
+        return this.entity.getPos();
     }
 
     @Override
@@ -46,12 +53,22 @@ public class EntityTrailProvider<T extends Entity> implements TrailProvider {
     }
 
     @Override
+    public TrailHolder.TrailPoint adjustPoint(TrailHolder.TrailPoint point, boolean vertical, float partialTicks) {
+        return point.offset(this.offset);
+    }
+
+    @Override
+    public int getTrailLight(float tickDelta) {
+        return Proxies.PROXY.getEntityLight(this.entity, tickDelta);
+    }
+
+    @Override
     public boolean shouldRemove() {
         return this.removeCondition.test(this.entity);
     }
 
     public void apply() {
-        TrailManager.addTrail(this.entity, this);
+        Proxies.PROXY.addTrail(this.entity, this);
     }
 
     public static <T extends Entity> Builder<T> builder(T entity) {
@@ -62,7 +79,7 @@ public class EntityTrailProvider<T extends Entity> implements TrailProvider {
         protected final T entity;
         protected Color4i color = new Color4i(160 / 255f, 164 / 255f, 195 / 255f, 1f);
         protected float width = 0.3f;
-        protected int length = 7;
+        protected int length = 15;
         protected Vec3d offset = Vec3d.ZERO;
         protected Predicate<T> removeCondition = e -> true;
 
