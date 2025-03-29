@@ -39,7 +39,7 @@ dependencies {
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')
 
-    modImplementation "maven.modrinth:neptune:TvKPw49Z"
+    modImplementation "maven.modrinth:neptune:YbiNRBz8"
     modImplementation "maven.modrinth:jupiter:quscWB5K"
 
     modImplementation "top.theillusivec4.curios:curios-forge:${curios_version}"

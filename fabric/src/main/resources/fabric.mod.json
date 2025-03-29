@@ -27,7 +27,7 @@
   ],
   "depends": {
     "minecraft": "1.20.1",
-    "neptune": ">=2.3",
+    "neptune": ">=3.2",
     "fabric-api": "*"
   }
 }
