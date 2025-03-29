@@ -35,13 +35,12 @@ public final class NeZha {
         NZAbilities.init();
 
         AccessoryManager.register(NZItems.HOT_WHEEL.get());
-
-        Double2ObjectFunction<Function<Entity, TrailProvider>> testConstructor = offset -> EntityTrailProvider.builder()
+        Double2ObjectFunction<Function<Entity, TrailProvider>> hotWheel = offset -> EntityTrailProvider.builder()
                 .offset(new Vec3d(offset, -1.5, 0), true)
                 .color(new Color4i(255, 69, 0, 255))
                 .width(0.2f)
                 ::build;
         TrailRegistry.registerPredicate(HotWheelItem.TRIAL_ID, entity -> !(entity instanceof LivingEntity living) || !AccessoryManager.getEquipped(living, AccessoryManager.Place.FEET).isOf(NZItems.HOT_WHEEL.get()));
-        TrailRegistry.register(HotWheelItem.TRIAL_ID, testConstructor.get(-0.15), testConstructor.get(0.15));
+        TrailRegistry.register(HotWheelItem.TRIAL_ID, hotWheel.get(-0.15), hotWheel.get(0.15));
     }
 }

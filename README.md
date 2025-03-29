@@ -9,7 +9,17 @@ This is a fan-made mod based on the `Ne Zha` movie.
 ### Added
 
 - Characters: Ne Zha & Ao Bing.
+
+<div align=center><img src="https://raw.githubusercontent.com/IAFEnvoy/NeZha/refs/heads/master/img/1.webp" style="width:400px;text-align:center;" alt=""></img></div>
+
 - Food: Lotus Root series. Integrated with Farmer's Delight
+
+<div align=center><img src="https://raw.githubusercontent.com/IAFEnvoy/NeZha/refs/heads/master/img/2.webp" style="width:400px;text-align:center;" alt=""></img></div>
+
+- Armors and weapons such as Hot Wheel.
+
+<div align=center><img src="https://raw.githubusercontent.com/IAFEnvoy/NeZha/refs/heads/master/img/3.webp" style="width:400px;text-align:center;" alt=""></img></div>
+
 - Some skills. (Need to use command for apply currently.)
 
 ### Planned
